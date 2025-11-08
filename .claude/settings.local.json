@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(ruby:*)"
+      "Bash(ruby:*)",
+      "Bash(make:*)"
     ],
     "deny": [],
     "ask": []

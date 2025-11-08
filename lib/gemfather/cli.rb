@@ -1,4 +1,3 @@
-require_relative "cli/settings_builder"
 require "fileutils"
 require "erb"
 
@@ -9,7 +8,7 @@ module Gemfather
     class Runner
       attr_accessor :settings_builder, :settings
 
-      def initialize(settings_builder: Gemfather::Cli::SettingsBuilder.new)
+      def initialize(settings_builder: ::Gemfather::Cli::SettingsBuilder.new)
         @settings_builder = settings_builder
         @settings = @settings_builder.call
       end
