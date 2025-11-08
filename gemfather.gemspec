@@ -14,14 +14,14 @@ Gem::Specification.new do |spec|
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage
-  spec.metadata["changelog_uri"] = "#{spec.homepage}/blob/main/CHANGELOG.md"
+  spec.metadata["changelog_uri"] = "#{spec.homepage}/blob/master/CHANGELOG.md"
 
   spec.files = Dir.glob("{lib,templates}/**/*", File::FNM_DOTMATCH) + %w[LICENSE.txt README.md CHANGELOG.md]
   spec.bindir = "exe"
   spec.executables = ["gemfather"]
 
-  spec.add_dependency "zeitwerk", "~> 2.6"
-  spec.add_runtime_dependency("tty-prompt", "~> 0.23")
+  spec.add_dependency "zeitwerk", "~> 2.7"
+  spec.add_dependency "tty-prompt", "~> 0.23"
 
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 13.0"
