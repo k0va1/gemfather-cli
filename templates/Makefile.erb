@@ -1,0 +1,25 @@
+.PHONY: test lint-fix console install
+
+install:
+	bundle install
+
+console:
+	bin/console
+<% if settings[:test] == "rspec" %>
+
+test:
+	bundle exec rspec
+<% elsif settings[:test] == "minitest" %>
+
+test:
+	bundle exec rake test
+<% end %>
+<% if settings[:linter] == "rubocop" %>
+
+lint-fix:
+	bundle exec rubocop -A
+<% elsif settings[:linter] == "standard" %>
+
+lint-fix:
+	bundle exec standardrb --fix
+<% end %>
